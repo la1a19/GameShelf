@@ -4,8 +4,6 @@ A personal game backlog tracker — search for games, add them to your shelf, tr
 
 Built as a solo project to practice full-stack development with Django, live search via AJAX, and third-party API integration.
 
-![screenshot](screenshot.png)
-<!-- Add a real screenshot of your tracker page here, saved in your repo root -->
 
 ## Features
 
@@ -55,13 +53,13 @@ Built as a solo project to practice full-stack development with Django, live sea
 
 5. Visit `http://127.0.0.1:8000/` and sign up for an account
 
-## What I'd improve next
-
-- Cache the IGDB auth token instead of requesting a new one on every search
-- Replace the "reload page after adding a game" approach with proper DOM updates via event delegation
-- Add drag-and-drop reordering for tracked games
-- Build a fully custom dropdown component to fix native `<select>` styling inconsistencies across browsers
-
 ## Screenshots
 
 <!-- Add 2-3 screenshots here: the search dropdown, the tracker table, the notes sidebar -->
+<img width="1918" height="986" alt="image" src="https://github.com/user-attachments/assets/64f3ab30-7f0e-40af-8194-03ad3e1fce25" />
+<img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/82dcc6bf-fc3c-4cad-a278-9259b8c61a3c" />
+<img width="1918" height="977" alt="image" src="https://github.com/user-attachments/assets/267ecc07-bc6e-43f5-9e92-e14430200f08" />
+<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/259446a2-0f37-4ea1-b6bc-f2f405c12405" />
+
+
+
