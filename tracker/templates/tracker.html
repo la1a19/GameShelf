@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+  <!-- Search bar -->
+  <div class="search-wrapper">
+    <input type="text" id="search-box" placeholder="Search for a game...">
+    <ul id="live-results"></ul>
+  </div>
+
+  <!-- Their tracked games -->
+  <h3>Your Shelf</h3>
+  <div class= "tracker-table-wrapper">
+    <table class="tracker-table">
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody id="tracker-list">
+            {% for item in trackerItems %}
+                <tr data-item-id="{{ item.id }}">
+                    <td>
+                        <img src="{{ item.game.cover_image_url }}" alt="{{ item.game.title }}" class="tracker-cover">
+                        <span>{{ item.game.title }}</span>
+                    </td>
+
+                    <td>
+                        <select class="badge badge-pill badge-{{ item.status_color }} status-select" data-item-id="{{ item.id }}">
+                            <option value="not_started" {% if item.status == "not_started" %}selected{% endif %}>Not Started</option>
+                            <option value="playing" {% if item.status == "playing" %}selected{% endif %}>Playing</option>
+                            <option value="done" {% if item.status == "done" %}selected{% endif %}>Done</option>
+                            <option value="dropped" {% if item.status == "dropped" %}selected{% endif %}>Dropped</option>
+                        </select>
+                    </td>
+
+                    <td class="delete-cell">
+                        <button class="notes-button" data-item-id="{{ item.id }}" data-title="{{ item.game.title }}" data-cover="{{ item.game.cover_image_url }}" title="Notes">☰</button>
+                        <button class="delete-button" data-item-id="{{ item.id }}" title="Remove from tracker">✕</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  {% if not trackerItems %}
+    <p id="empty-state">Your tracker is empty. Use the search bar above to add games!</p>
+  {% endif %}
+
+  <div id="notes-sidebar" class="notes-sidebar">
+    <button id="notes-close" class="notes-close">✕</button>
+    <img id="notes-cover" class="notes-sidebar-cover" src="" alt="">
+    <h3 id="notes-title"></h3>
+    <textarea id="notes-textarea" placeholder="Write your notes here..."></textarea>
+    <button id="notes-save" class="notes-save-btn">Save</button>
+  </div>
+  <div id="notes-overlay" class="notes-overlay"></div>
+
+
+  
+  <script src="{% static 'tracker.js' %}"></script>
+
+{% endblock %}
