@@ -1,4 +1,4 @@
-# 🎮 GameShelf
+# GameShelf
 
 A personal game backlog tracker — search for games, add them to your shelf, track your progress, and jot down notes as you play.
 
@@ -7,12 +7,12 @@ Built as a solo project to practice full-stack development with Django, live sea
 
 ## Features
 
-- 🔍 **Live search** — search for games via the IGDB API, results appear as you type (debounced, no page reload)
-- ➕ **Add to shelf** — one click adds a game to your personal tracker
-- 🏷️ **Status tracking** — mark games as Not Started, Playing, Done, or Dropped, with instantly updating colored status pills
-- 📝 **Per-game notes** — open a slide-out sidebar to jot down notes on any tracked game
-- 🗑️ **Remove games** — delete a game from your shelf with a hover-revealed button
-- 🔐 **User accounts** — sign up, log in, and keep your own private tracker (built on Django's auth system)
+-  **Live search** — search for games via the IGDB API, results appear as you type (debounced, no page reload)
+-  **Add to shelf** — one click adds a game to your personal tracker
+-  **Status tracking** — mark games as Not Started, Playing, Done, or Dropped, with instantly updating colored status pills
+-  **Per-game notes** — open a slide-out sidebar to jot down notes on any tracked game
+-  **Remove games** — delete a game from your shelf with a hover-revealed button
+-  **User accounts** — sign up, log in, and keep your own private tracker (built on Django's auth system)
 
 ## Tech Stack
 
